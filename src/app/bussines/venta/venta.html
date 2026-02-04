@@ -1,0 +1,255 @@
+<section class="py-16 bg-background">
+              <div class="container mx-auto max-w-7xl px-6" >
+                <div class="text-center mb-12">
+                  <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    Propiedades en Venta
+                  </h2>
+                  <p class="text-default-600 text-lg max-w-2xl mx-auto">
+                    Encuentra tu hogar ideal entre nuestras mejores propiedades disponibles para
+                    compra.
+                  </p>
+                </div>
+                <div class="container mx-auto max-w-7xl px-6" >
+                  <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-foreground">2 Propiedades encontradas</h2>
+                    <div class="text-default-600">Mostrando 2 de 2 resultados</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
+                <div id="contenido" *ngFor="let item of mockPropiedades.data">
+                    <a
+                    class="relative items-center tap-highlight-transparent outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-hover active:opacity-disabled group bg-content1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden block cursor-pointer border border-divider"
+                    href="#"
+                    (click)="detallePropiedad(item.rowno);false"
+                    tabindex="0"
+                    data-react-aria-pressable="true"
+                    role="link"
+                    ><div class="relative h-48 overflow-hidden">
+                      <img
+                        alt="Casa en renta en los agaves"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        src="{{item.img}}"
+                      />
+                      <div class="absolute top-4 left-4"> 
+                        <span class="px-3 py-1 rounded-full text-sm font-medium bg-yellow-500 text-white"
+                          >{{item.tipo}}</span>
+                      </div>
+                      <div class="absolute bottom-4 right-4">
+                        <span
+                          class="bg-content1/90 text-foreground px-3 py-1 rounded text-sm font-medium backdrop-blur-sm"
+                          >{{item.precio}}/mes</span
+                        >
+                      </div>
+                    </div>
+                    <div class="p-6">
+                      <h3 class="text-xl font-bold text-foreground mb-2 line-clamp-1">
+                        {{item.titulo}}
+                      </h3>
+                      <p class="text-default-600 mb-4 line-clamp-1">Los Agaves, León</p>
+                      <div class="flex items-center justify-between text-sm text-default-500 mb-4">
+                        <span>{{item.habitaciones}}</span><span>{{item.bat}}</span>
+                      </div>
+                      <p class="text-default-600 text-sm line-clamp-2 mb-4">
+                        {{item.desc}}.
+                      </p>
+                      <div class="flex items-center gap-2 text-yellow-500 font-medium">
+                        <span>Ver Detalles</span
+                        ><svg
+                          class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                  
+                  <!--
+                   <a
+                    class="relative items-center tap-highlight-transparent outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-hover active:opacity-disabled group bg-content1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden block cursor-pointer border border-divider"
+                    href="/properties/12"
+                    tabindex="0"
+                    data-react-aria-pressable="true"
+                    role="link"
+                    ><div class="relative h-48 overflow-hidden">
+                      <img
+                        alt="Casa en renta en los agaves"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        src="https://res.cloudinary.com/drz6acdcg/image/upload/v1756958502/1_1077b85d1b.png"
+                      />
+                      <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 rounded-full text-sm font-medium bg-yellow-500 text-white"
+                          >En Renta</span
+                        >
+                      </div>
+                      <div class="absolute bottom-4 right-4">
+                        <span
+                          class="bg-content1/90 text-foreground px-3 py-1 rounded text-sm font-medium backdrop-blur-sm"
+                          >$11,700/mes</span
+                        >
+                      </div>
+                    </div>
+                    <div class="p-6">
+                      <h3 class="text-xl font-bold text-foreground mb-2 line-clamp-1">
+                        Casa en renta en los agaves
+                      </h3>
+                      <p class="text-default-600 mb-4 line-clamp-1">Los Agaves, León</p>
+                      <div class="flex items-center justify-between text-sm text-default-500 mb-4">
+                        <span>3 Habitaciones</span><span>2 Baños</span>
+                      </div>
+                      <p class="text-default-600 text-sm line-clamp-2 mb-4">
+                        Casa en renta en los agaves residencial 3 habitaciones 2 baños y medio Terracita Planta
+                        baja Sala Sala Comedor Cocina Bodeguita Patio de lavado Renta mensual 11,700 incluye
+                        mantenimiento.
+                      </p>
+                      <div class="flex items-center gap-2 text-yellow-500 font-medium">
+                        <span>Ver Detalles</span
+                        ><svg
+                          class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                   <a
+                    class="relative items-center tap-highlight-transparent outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-hover active:opacity-disabled group bg-content1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden block cursor-pointer border border-divider"
+                    href="/properties/12"
+                    tabindex="0"
+                    data-react-aria-pressable="true"
+                    role="link"
+                    ><div class="relative h-48 overflow-hidden">
+                      <img
+                        alt="Casa en renta en los agaves"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        src="https://res.cloudinary.com/drz6acdcg/image/upload/v1756958502/1_1077b85d1b.png"
+                      />
+                      <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 rounded-full text-sm font-medium bg-yellow-500 text-white"
+                          >En Renta</span
+                        >
+                      </div>
+                      <div class="absolute bottom-4 right-4">
+                        <span
+                          class="bg-content1/90 text-foreground px-3 py-1 rounded text-sm font-medium backdrop-blur-sm"
+                          >$11,700/mes</span
+                        >
+                      </div>
+                    </div>
+                    <div class="p-6">
+                      <h3 class="text-xl font-bold text-foreground mb-2 line-clamp-1">
+                        Casa en renta en los agaves
+                      </h3>
+                      <p class="text-default-600 mb-4 line-clamp-1">Los Agaves, León</p>
+                      <div class="flex items-center justify-between text-sm text-default-500 mb-4">
+                        <span>3 Habitaciones</span><span>2 Baños</span>
+                      </div>
+                      <p class="text-default-600 text-sm line-clamp-2 mb-4">
+                        Casa en renta en los agaves residencial 3 habitaciones 2 baños y medio Terracita Planta
+                        baja Sala Sala Comedor Cocina Bodeguita Patio de lavado Renta mensual 11,700 incluye
+                        mantenimiento.
+                      </p>
+                      <div class="flex items-center gap-2 text-yellow-500 font-medium">
+                        <span>Ver Detalles</span
+                        ><svg
+                          class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>  
+                   <a
+                    class="relative items-center tap-highlight-transparent outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-hover active:opacity-disabled group bg-content1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden block cursor-pointer border border-divider"
+                    href="/properties/12"
+                    tabindex="0"
+                    data-react-aria-pressable="true"
+                    role="link"
+                    ><div class="relative h-48 overflow-hidden">
+                      <img
+                        alt="Casa en renta en los agaves"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        src="https://res.cloudinary.com/drz6acdcg/image/upload/v1756958502/1_1077b85d1b.png"
+                      />
+                      <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 rounded-full text-sm font-medium bg-yellow-500 text-white"
+                          >En Renta</span
+                        >
+                      </div>
+                      <div class="absolute bottom-4 right-4">
+                        <span 
+                          class="bg-content1/90 text-foreground px-3 py-1 rounded text-sm font-medium backdrop-blur-sm"
+                          >$11,700/mes</span
+                        >
+                      </div>
+                    </div>
+                    <div class="p-6">
+                      <h3 class="text-xl font-bold text-foreground mb-2 line-clamp-1">
+                        Casa en renta en los agaves
+                      </h3>
+                      <p class="text-default-600 mb-4 line-clamp-1">Los Agaves, León</p>
+                      <div class="flex items-center justify-between text-sm text-default-500 mb-4">
+                        <span>3 Habitaciones</span><span>2 Baños</span>
+                      </div>
+                      <p class="text-default-600 text-sm line-clamp-2 mb-4">
+                        Casa en renta en los agaves residencial 3 habitaciones 2 baños y medio Terracita Planta
+                        baja Sala Sala Comedor Cocina Bodeguita Patio de lavado Renta mensual 11,700 incluye
+                        mantenimiento.
+                      </p>
+                      <div class="flex items-center gap-2 text-yellow-500 font-medium">
+                        <span>Ver Detalles</span
+                        ><svg
+                          class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                  -->                 
+                </div>
+              </div>
+
+                <div class="text-center mt-12">
+                  <a
+                    class="tap-highlight-transparent no-underline hover:opacity-hover active:opacity-disabled z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-6 min-w-24 h-12 text-medium gap-3 rounded-full [&amp;&gt;svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-warning text-warning data-[hover=true]:opacity-hover"
+                    href="/properties?state=sale"
+                    tabindex="0"
+                    data-react-aria-pressable="true"
+                    role="link"
+                    >Ver Todas las Propiedades en Venta</a
+                  >
+                </div>
+              </div>
+            </section>
