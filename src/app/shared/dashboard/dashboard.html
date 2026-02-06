@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Etiqueta meta obligatoria para que funcione el diseño responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página con Bootstrap y CSS propio</title>
+        <!-- Enlace a tu archivo CSS personalizado (debe ir DESPUÉS de Bootstrap CSS) -->
+  </head>
+  <body>
+    <h1>¡Hola, mundo!</h1>
+    <!-- Opcional: Script JS de Bootstrap (necesario para componentes interactivos como modales, etc.) -->
+    <script
+      src="https://cdn.jsdelivr.net"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>    
+   
+        
+    <div class="dashboard-container">
+  <aside>
+    
+     <app-sidebar></app-sidebar>
+    
+  </aside>
+  
+  <main>
+    <header>Panel de Administración</header>
+    <!-- AQUÍ SE CARGAN LOS HIJOS DEL DASHBOARD -->
+    <router-outlet></router-outlet>
+  </main>
+</div>
+  </body>
+</html>
